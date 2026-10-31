@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+</head>
+
+<body>
+
+    <h1>Student Registration Form</h1>
+
+    <form action="/register" method="POST">
+
+        <!-- Personal Information -->
+        <h2>1. Personal Information</h2>
+
+        <label for="fullName">Full Name:</label>
+        <input
+            type="text"
+            id="fullName"
+            name="fullName"
+            placeholder="Enter your full name"
+            maxlength="50"
+            required
+        >
+        <br><br>
+
+        <label for="firstName">First Name:</label>
+        <input
+            type="text"
+            id="firstName"
+            name="firstName"
+            placeholder="Enter your first name"
+            required
+        >
+        <br><br>
+
+        <label for="lastName">Last Name:</label>
+        <input
+            type="text"
+            id="lastName"
+            name="lastName"
+            placeholder="Enter your last name"
+            required
+        >
+        <br><br>
+
+        <!-- <label for="dateOfBirth">Date of Birth:</label>
+        <input
+            type="date"
+            id="dateOfBirth"
+            name="dateOfBirth"
+            required
+        > -->
+        <br><br>
+
+        <label for="age">Age:</label>
+        <input
+            type="number"
+            id="age"
+            name="age"
+            min="15"
+            max="50"
+            required
+        >
+        <br><br>
+
+        <!-- <p>Gender:</p>
+
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Other</label> -->
+
+        <br><br>
+
+                <!-- <label for="profilePicture">Profile Picture:</label>
+                <input
+                    type="file"
+                    id="profilePicture"
+                    name="profilePicture"
+                > -->
+
+        <hr>
+
+        <!-- Contact Information -->
+        <h2>2. Contact Information</h2>
+
+        <label for="email">Email Address:</label>
+        <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="example@email.com"
+            required
+        >
+        <br><br>
+
+        <label for="phone">Phone Number:</label>
+        <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="08012345678"
+            required
+        >
+        <br><br>
+
+        <label for="address">Home Address:</label>
+        <input
+            type="text"
+            id="address"
+            name="address"
+            placeholder="Enter your home address"
+            required
+        >
+        <br><br>
+
+        <label for="state">State:</label>
+        <input
+            type="text"
+            id="state"
+            name="state"
+            placeholder="Enter your state"
+        >
+        <br><br>
+
+        <label for="postalCode">Postal Code:</label>
+        <input
+            type="number"
+            id="postalCode"
+            name="postalCode"
+            placeholder="Enter postal code"
+        >
+        <br><br>
+
+        <label for="website">Personal Website:</label>
+        <input
+            type="url"
+            id="website"
+            name="website"
+            placeholder="https://example.com"
+        >
+
+        <hr>
+
+        <!-- Account Information -->
+        <h2>3. Account Information</h2>
+
+        <label for="username">Username:</label>
+        <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="Enter username"
+            minlength="5"
+            maxlength="20"
+            required
+        >
+        <br><br>
+
+        <label for="password">Password:</label>
+        <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Enter password"
+            minlength="8"
+            maxlength="30"
+            required
+        >
+        <br><br>
+
+        <label for="confirmPassword">Confirm Password:</label>
+        <input
+            type="password"
+            id="confirmPassword"
+            name="confirmPassword"
+            placeholder="Confirm your password"
+            required
+        >
+
+        <hr>
+
+        <!-- Academic Information -->
+        <h2>4. Academic Information</h2>
+
+        <label for="studentId">Student ID:</label>
+        <input
+            type="text"
+            id="studentId"
+            name="studentId"
+            placeholder="Enter student ID"
+            required
+        >
+        <br><br>
+
+        <label for="admissionNumber">Admission Number:</label>
+        <input
+            type="text"
+            id="admissionNumber"
+            name="admissionNumber"
+            placeholder="Enter admission number"
+        >
+        <br><br>
+
+        <label for="course">Course of Study:</label>
+        <input
+            type="text"
+            id="course"
+            name="course"
+            placeholder="e.g. Software Engineering"
+            required
+        >
+        <br><br>
+
+        <label for="level">Level:</label>
+        <input
+            type="number"
+            id="level"
+            name="level"
+            min="100"
+            max="600"
+            required
+        >
+        <br><br>
+
+        <label for="cgpa">CGPA:</label>
+        <input
+            type="number"
+            id="cgpa"
+            name="cgpa"
+            min="0"
+            max="5"
+            step="0.01"
+            placeholder="e.g. 4.50"
+        >
+        <br><br>
+
+        <label for="graduationDate">Expected Graduation Date:</label>
+        <input
+            type="date"
+            id="graduationDate"
+            name="graduationDate"
+        >
+
+        <hr>
+
+        <!-- Programming Information -->
+        <h2>5. Programming Information</h2>
+
+        <p>Favorite Programming Language:</p>
+
+        <input
+            type="radio"
+            id="htmlCss"
+            name="favoriteLanguage"
+            value="HTML/CSS"
+        >
+        <label for="htmlCss">HTML/CSS</label>
+
+        <input
+            type="radio"
+            id="javascript"
+            name="favoriteLanguage"
+            value="JavaScript"
+        >
+        <label for="javascript">JavaScript</label>
+
+        <input
+            type="radio"
+            id="python"
+            name="favoriteLanguage"
+            value="Python"
+        >
+        <label for="python">Python</label>
+
+        <input
+            type="radio"
+            id="java"
+            name="favoriteLanguage"
+            value="Java"
+        >
+        <label for="java">Java</label>
+
+        <input
+            type="radio"
+            id="cpp"
+            name="favoriteLanguage"
+            value="C++"
+        >
+        <label for="cpp">C++</label>
+
+        <input
+            type="radio"
+            id="otherLanguage"
+            name="favoriteLanguage"
+            value="Other"
+        >
+        <label for="otherLanguage">Other</label>
+
+        <br><br>
+
+        <p>Programming Skills:</p>
+
+        <input type="checkbox" id="html" name="skills" value="HTML">
+        <label for="html">HTML</label>
+
+        <input type="checkbox" id="css" name="skills" value="CSS">
+        <label for="css">CSS</label>
+
+        <input type="checkbox" id="js" name="skills" value="JavaScript">
+        <label for="js">JavaScript</label>
+
+        <input type="checkbox" id="react" name="skills" value="React">
+        <label for="react">React</label>
+
+        <input type="checkbox" id="node" name="skills" value="Node.js">
+        <label for="node">Node.js</label>
+
+        <input type="checkbox" id="pythonSkill" name="skills" value="Python">
+        <label for="pythonSkill">Python</label>
+
+        <input type="checkbox" id="git" name="skills" value="Git">
+        <label for="git">Git</label>
+
+        <hr>
+
+        <!-- Student Preferences -->
+        <h2>6. Student Preferences</h2>
+
+        <label for="studyTime">Preferred Study Time:</label>
+        <input
+            type="time"
+            id="studyTime"
+            name="studyTime"
+        >
+        <br><br>
+
+        <label for="studyDate">Preferred Study Date:</label>
+        <input
+            type="date"
+            id="studyDate"
+            name="studyDate"
+        >
+        <br><br>
+
+        <label for="studyHours">Hours Studied Per Day:</label>
+        <input
+            type="number"
+            id="studyHours"
+            name="studyHours"
+            min="1"
+            max="12"
+        >
+        <br><br>
+
+        <label for="favoriteColor">Favorite Color:</label>
+        <input
+            type="color"
+            id="favoriteColor"
+            name="favoriteColor"
+        >
+        <br><br>
+
+        <label for="satisfaction">Satisfaction Level:</label>
+        <input
+            type="range"
+            id="satisfaction"
+            name="satisfaction"
+            min="0"
+            max="100"
+        >
+
+        <hr>
+
+        <!-- Additional Information -->
+        <h2>7. Additional Information</h2>
+
+        <label for="courseSearch">Search for a Course:</label>
+        <input
+            type="search"
+            id="courseSearch"
+            name="courseSearch"
+            placeholder="Search for a course"
+        >
+        <br><br>
+
+        <label for="linkedin">LinkedIn Profile:</label>
+        <input
+            type="url"
+            id="linkedin"
+            name="linkedin"
+            placeholder="https://linkedin.com/in/username"
+        >
+        <br><br>
+
+        <label for="cv">Upload CV:</label>
+        <input
+            type="file"
+            id="cv"
+            name="cv"
+        >
+        <br><br>
+
+        <label for="emergencyPhone">Emergency Contact Phone:</label>
+        <input
+            type="tel"
+            id="emergencyPhone"
+            name="emergencyPhone"
+            placeholder="08012345678"
+        >
+
+        <hr>
+
+        <!-- Agreement -->
+        <h2>8. Agreement</h2>
+
+        <input
+            type="checkbox"
+            id="confirmation"
+            name="confirmation"
+            value="confirmed"
+            required
+        >
+        <label for="confirmation">
+            I confirm that the information I provided is correct.
+        </label>
+
+        <br><br>
+
+        <input
+            type="checkbox"
+            id="updates"
+            name="updates"
+            value="yes"
+        >
+        <label for="updates">
+            I want to receive student updates and announcements.
+        </label>
+
+        <hr>
+
+        <!-- About Me -->
+        <h2>9. About Me</h2>
+
+        <label for="nickname">Nickname:</label>
+        <input
+            type="text"
+            id="nickname"
+            name="nickname"
+            placeholder="Enter your nickname"
+        >
+        <br><br>
+
+        <label for="aboutMe">About Me:</label>
+        <textarea
+            id="aboutMe"
+            name="aboutMe"
+            placeholder="Tell us about yourself"
+            rows="5"
+            cols="40"
+        ></textarea>
+
+        <br><br>
+
+        <label for="programmingExperience">
+            Years of Programming Experience:
+        </label>
+
+        <input
+            type="number"
+            id="programmingExperience"
+            name="programmingExperience"
+            min="0"
+            max="50"
+        >
+
+        <br><br>
+
+        <label for="programmingStartDate">
+            Date You Started Programming:
+        </label>
+
+        <input
+            type="date"
+            id="programmingStartDate"
+            name="programmingStartDate"
+        >
+
+        <br><br>
+
+        <input
+            type="checkbox"
+            id="enjoyCoding"
+            name="enjoyCoding"
+            value="yes"
+        >
+        <label for="enjoyCoding">I enjoy coding</label>
+
+        <br><br>
+
+        <p>Programming Level:</p>
+
+        <input
+            type="radio"
+            id="beginner"
+            name="programmingLevel"
+            value="beginner"
+        >
+        <label for="beginner">Beginner</label>
+
+        <input
+            type="radio"
+            id="intermediate"
+            name="programmingLevel"
+            value="intermediate"
+        >
+        <label for="intermediate">Intermediate</label>
+
+        <input
+            type="radio"
+            id="advanced"
+            name="programmingLevel"
+            value="advanced"
+        >
+        <label for="advanced">Advanced</label>
+
+        <br><br>
+
+        <!-- Buttons -->
+        <button type="submit">Register Student</button>
+
+        <button type="reset">Clear Form</button>
+
+    </form>
+
+</body>
+</html>
